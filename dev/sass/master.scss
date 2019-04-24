@@ -1,0 +1,57 @@
+@import 'colors';
+
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  background: $black;
+  color: $white;
+}
+
+.core {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: Open Sans, sans-serif;
+  color: white;
+
+  #headshot {
+    img {
+      margin: 0 auto;
+      display: block;
+      width: 125px;
+      height: 125px;
+    }
+
+    .headshot-name {
+      display: inline-block;
+      font-family: 'Exo 2', sans-serif;
+      text-transform: uppercase;
+      font-size: 60px;
+    }
+  }
+
+  // #mobile-headshot {
+  //   display: none;
+  // }
+}
+
+#links {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: white;
+  }
+}

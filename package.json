@@ -1,0 +1,17 @@
+{
+  "name": "shukin-web",
+  "version": "0.0.1",
+  "description": "Shukin's personal website",
+  "main": "index.html",
+  "author": "Jessica Alouette (tielqt)",
+  "license": "SEE LICENSE IN LICENSE.MD",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "normalize.css": "^7.0.0",
+    "yargs": "^8.0.2"
+  }
+}
