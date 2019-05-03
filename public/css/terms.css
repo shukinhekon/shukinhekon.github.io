@@ -4,6 +4,7 @@
 
 body {
   background: #34373D;
+  transition: 0.8s ease;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -23,10 +24,16 @@ h4 {
 .tos-section {
   padding: 15px 15px;
   color: #E2E7ED;
+  transition: 0.8s ease;
   font-family: "Open Sans", sans-serif;
   line-height: 1.65;
   margin: 0px 15px;
   border-bottom: 1px solid #E2E7ED;
+}
+
+.day-mode .tos-section {
+  color: #34373D;
+  border-bottom: 1px solid #34373D;
 }
 
 .tos-section .quote {
@@ -94,6 +101,10 @@ a, a:visited {
 .tos-controls .tos-control.active-mode {
   border-bottom: 3px solid #E2E7ED;
   opacity: 0.75;
+}
+
+.day-mode .tos-controls .tos-control.active-mode {
+  border-bottom: 3px solid #34373D;
 }
 
 .tos-controls .tos-control.active-mode h3 {
