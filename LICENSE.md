@@ -1,3 +1,3 @@
-&copy; Shukinhekon and Jessica Alouette (tielqt) 2019. All rights reserved.
+&copy; Shukinhekon ("Shukin") and Jessica Alouette ("tielqt") 2019. All rights reserved.
 
-Contains art assets &copy; Shukinhekon.
+Contains art assets &copy; Shukinhekon ("Shukin").

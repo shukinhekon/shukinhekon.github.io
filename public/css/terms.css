@@ -1,0 +1,107 @@
+.no-border {
+  border: 0 !important;
+}
+
+body {
+  background: #34373D;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+body.day-mode {
+  background: #E2E7ED;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.tos-section {
+  padding: 15px 15px;
+  color: #E2E7ED;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.65;
+  margin: 0px 15px;
+  border-bottom: 1px solid #E2E7ED;
+}
+
+.tos-section .quote {
+  padding: 10px 0 10px 15px;
+  border-left: 5px solid #E2E7ED;
+  font-style: italic;
+  line-height: 1.75;
+}
+
+.tos-section ol {
+  margin: 0;
+  padding: 0 15px;
+  counter-reset: item;
+}
+
+.tos-section ol > li {
+  position: relative;
+  padding-left: 1em;
+  list-style-type: none;
+  counter-increment: item;
+}
+
+.tos-section ol > li:before {
+  position: absolute;
+  left: -1em;
+  display: inline-block;
+  width: 1.5em;
+  font-weight: bold;
+  content: counter(item) ".";
+}
+
+.tos-section ol > li > ol {
+  counter-reset: item;
+}
+
+.tos-section ol > li > ol li {
+  counter-increment: item;
+  list-style: lower-alpha;
+}
+
+.tos-section ol > li > ol li:before {
+  content: none;
+}
+
+a, a:visited {
+  color: #568AD6;
+}
+
+.tos-header {
+  line-height: 1.15;
+  text-align: center;
+}
+
+.tos-header h1 {
+  margin-bottom: 0;
+}
+
+.tos-controls .tos-control {
+  display: inline-block;
+  margin: 0px 10px;
+  opacity: 0.5;
+  transition: 0.7s ease;
+}
+
+.tos-controls .tos-control.active-mode {
+  border-bottom: 3px solid #E2E7ED;
+  opacity: 0.75;
+}
+
+.tos-controls .tos-control.active-mode h3 {
+  margin-bottom: 5px;
+}
+
+.tos-controls .tos-control:hover, .tos-controls .tos-control:active {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=maps/terms.css.map */
