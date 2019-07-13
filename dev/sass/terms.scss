@@ -1,17 +1,14 @@
 @import 'colors';
 @import 'utilities';
+@import 'variables';
 
 body {
   background: $black;
-  transition: 0.8s ease;
+  transition: 0.25s ease;
 
   &.day-mode {
     background: $white;
   }
-
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 h1,
@@ -22,14 +19,18 @@ h4 {
 }
 
 .tos-section {
-  padding: 15px 15px;
+  padding: 15px 5px;
   color: $white;
-  transition: 0.8s ease;
+  transition: 0.3s ease;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.65;
+  line-height: 1.90;
 
   margin: 0px 15px;
   border-bottom: 1px solid $white;
+
+  @media (min-width: $mobile--large) {
+    padding: 15px 15px;
+  }
 
   .day-mode & {
     color: $black;
@@ -40,7 +41,24 @@ h4 {
     padding: 10px 0 10px 15px;
     border-left: 5px solid $white;
     font-style: italic;
-    line-height: 1.75;
+    line-height: 2.25;
+
+    .day-mode & {
+      border-left: 5px solid $black;
+    }
+  }
+
+  p {
+    margin: 1.5em 0;
+  }
+
+  p:first-of-type {
+    margin: 0 0 1.5em;
+  }
+
+  h2 {
+    font-size: 34px;
+    margin: 10px 0;
   }
 
   ol {
@@ -50,9 +68,13 @@ h4 {
   
     > li {
       position: relative;
-      padding-left: 1em;
+      padding-left: 0.5em;
       list-style-type: none;
       counter-increment: item;
+
+      @media (min-width: $mobile--large) {
+        padding-left: 1em;
+      }
 
       &:before {
         position: absolute;
@@ -64,7 +86,12 @@ h4 {
       }
 
       > ol {
+        padding: 0 0 0 5px;
         counter-reset: item;
+
+        @media (min-width: $mobile--large) {
+          padding: 0 15px;
+        }
 
         li {
           counter-increment: item;
@@ -80,7 +107,11 @@ h4 {
 }
 
 a, a:visited {
-  color: $blue;
+  color: $accent-2;
+
+  .day-mode & {
+    color: $accent-1;
+  }
 }
 
 .tos-header {
@@ -88,7 +119,58 @@ a, a:visited {
   text-align: center;
 
   h1 {
-    margin-bottom: 0;
+    margin: 0;
+    font-size: 28px;
+
+    @media (min-width: $mobile--small) {
+      font-size: 34px;
+    }
+
+    @media (min-width: $mobile--large) {
+      font-size: 44px;
+    }
+  }
+
+  .logo {
+    object {
+      max-width: 250px;
+    }
+  }
+}
+
+.shukin-logo-svg {
+  margin-top: 20px;
+  svg {
+    width: 150px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+
+    @media (min-width: $mobile--small) {
+      width: 225px;
+    }
+
+    @media (min-width: $mobile--large) {
+      width: 300px;
+    }
+
+    .shukin-path {
+      fill: $white;
+      transition: 0.35s ease;
+
+      .day-mode & {
+        fill: $black;
+      }
+    }
+  }
+}
+
+.tos-footer {
+  text-align: center;
+
+  .shukin-logo-svg svg {
+    width: 200px;
   }
 }
 
@@ -97,7 +179,9 @@ a, a:visited {
     display: inline-block;
     margin: 0px 10px;
     opacity: 0.5;
-    transition: 0.7s ease;
+    transition: 0.3s ease;
+    cursor: pointer;
+
     &.active-mode {
       border-bottom: 3px solid $white;
       opacity: 0.75;
@@ -117,3 +201,5 @@ a, a:visited {
     }
   }
 }
+
+@import 'responsive';

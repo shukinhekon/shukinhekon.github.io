@@ -2,12 +2,13 @@
   border: 0 !important;
 }
 
+.text--center {
+  text-align: center !important;
+}
+
 body {
   background: #34373D;
-  transition: 0.8s ease;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  transition: 0.25s ease;
 }
 
 body.day-mode {
@@ -22,13 +23,19 @@ h4 {
 }
 
 .tos-section {
-  padding: 15px 15px;
+  padding: 15px 5px;
   color: #E2E7ED;
-  transition: 0.8s ease;
+  transition: 0.3s ease;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.65;
+  line-height: 1.90;
   margin: 0px 15px;
   border-bottom: 1px solid #E2E7ED;
+}
+
+@media (min-width: 800px) {
+  .tos-section {
+    padding: 15px 15px;
+  }
 }
 
 .day-mode .tos-section {
@@ -40,7 +47,24 @@ h4 {
   padding: 10px 0 10px 15px;
   border-left: 5px solid #E2E7ED;
   font-style: italic;
-  line-height: 1.75;
+  line-height: 2.25;
+}
+
+.day-mode .tos-section .quote {
+  border-left: 5px solid #34373D;
+}
+
+.tos-section p {
+  margin: 1.5em 0;
+}
+
+.tos-section p:first-of-type {
+  margin: 0 0 1.5em;
+}
+
+.tos-section h2 {
+  font-size: 34px;
+  margin: 10px 0;
 }
 
 .tos-section ol {
@@ -51,9 +75,15 @@ h4 {
 
 .tos-section ol > li {
   position: relative;
-  padding-left: 1em;
+  padding-left: 0.5em;
   list-style-type: none;
   counter-increment: item;
+}
+
+@media (min-width: 800px) {
+  .tos-section ol > li {
+    padding-left: 1em;
+  }
 }
 
 .tos-section ol > li:before {
@@ -66,7 +96,14 @@ h4 {
 }
 
 .tos-section ol > li > ol {
+  padding: 0 0 0 5px;
   counter-reset: item;
+}
+
+@media (min-width: 800px) {
+  .tos-section ol > li > ol {
+    padding: 0 15px;
+  }
 }
 
 .tos-section ol > li > ol li {
@@ -79,6 +116,10 @@ h4 {
 }
 
 a, a:visited {
+  color: #F0923B;
+}
+
+.day-mode a, .day-mode a:visited {
   color: #568AD6;
 }
 
@@ -88,14 +129,73 @@ a, a:visited {
 }
 
 .tos-header h1 {
-  margin-bottom: 0;
+  margin: 0;
+  font-size: 28px;
+}
+
+@media (min-width: 425px) {
+  .tos-header h1 {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 800px) {
+  .tos-header h1 {
+    font-size: 44px;
+  }
+}
+
+.tos-header .logo object {
+  max-width: 250px;
+}
+
+.shukin-logo-svg {
+  margin-top: 20px;
+}
+
+.shukin-logo-svg svg {
+  width: 150px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+@media (min-width: 425px) {
+  .shukin-logo-svg svg {
+    width: 225px;
+  }
+}
+
+@media (min-width: 800px) {
+  .shukin-logo-svg svg {
+    width: 300px;
+  }
+}
+
+.shukin-logo-svg svg .shukin-path {
+  fill: #E2E7ED;
+  transition: 0.35s ease;
+}
+
+.day-mode .shukin-logo-svg svg .shukin-path {
+  fill: #34373D;
+}
+
+.tos-footer {
+  text-align: center;
+}
+
+.tos-footer .shukin-logo-svg svg {
+  width: 200px;
 }
 
 .tos-controls .tos-control {
   display: inline-block;
   margin: 0px 10px;
   opacity: 0.5;
-  transition: 0.7s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .tos-controls .tos-control.active-mode {
@@ -113,6 +213,110 @@ a, a:visited {
 
 .tos-controls .tos-control:hover, .tos-controls .tos-control:active {
   opacity: 1;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 760px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 800px) {
+  .container--small {
+    width: 760px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container--small {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container--small {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container--small {
+    width: 800px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.row--rev {
+  flex-wrap: wrap-reverse;
+}
+
+.one-whole,
+.one-half,
+.two-third,
+.one-third,
+.one-fourth {
+  display: inline-block;
+  position: relative;
+  margin-right: -4px;
+  padding: 7px 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.one-whole img,
+.one-half img,
+.two-third img,
+.one-third img,
+.one-fourth img {
+  max-width: 100%;
+}
+
+.one-half--mob {
+  width: 50%;
+}
+
+@media (min-width: 800px) {
+  .one-whole {
+    width: 100%;
+  }
+  .one-third {
+    width: 33.3333%;
+  }
+  .two-third {
+    width: 66.6666%;
+  }
+  .one-half {
+    width: 50%;
+  }
+  .one-fourth {
+    width: 25%;
+  }
 }
 
 /*# sourceMappingURL=maps/terms.css.map */

@@ -25,9 +25,32 @@ body {
 .core #headshot img {
   margin: 0 auto;
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   border-radius: 150px;
+}
+
+@media (min-width: 1024px) {
+  .core #headshot img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.core #headshot #shukin-logo {
+  display: inline-block;
+  width: 100%;
+  max-height: 150px;
+  vertical-align: middle;
+}
+
+@media (min-width: 1024px) {
+  .core #headshot #shukin-logo {
+    margin-left: 25px;
+    margin-top: 15px;
+    max-width: 325px;
+    max-height: unset;
+  }
 }
 
 .core #headshot .headshot-name {
@@ -38,16 +61,178 @@ body {
   margin-bottom: 25px;
 }
 
-#links ul {
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#links ul.link-row {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 22px;
-  line-height: 1.45;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+#links ul.link-row.link-row-2 {
+  margin-top: 20px;
+}
+
+#links li {
+  display: inline-block;
+  background-color: #568AD6;
+  transform: skew(-8deg);
+  transition: 0.3s ease;
+}
+
+#links li:hover {
+  background-color: #27589f;
+}
+
+#links li a {
+  padding: 9px 25px;
+  text-decoration: none;
+}
+
+#links li.has-icon a {
+  padding: 7px 10px 7px;
+}
+
+#links .link-row-2 li {
+  background-color: #27589f;
+  transition: 0.3s ease;
+}
+
+#links .link-row-2 li:hover {
+  background-color: #132b4d;
 }
 
 #links a {
   color: white;
+  display: inline-block;
+  transform: skew(8deg);
+}
+
+#links .link-icon {
+  height: 24px;
+  position: relative;
+  top: 4px;
+}
+
+.content-container {
+  padding: 0 20px;
+}
+
+.no-border {
+  border: 0 !important;
+}
+
+.text--center {
+  text-align: center !important;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 760px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 800px) {
+  .container--small {
+    width: 760px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container--small {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container--small {
+    width: 800px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container--small {
+    width: 800px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.row--rev {
+  flex-wrap: wrap-reverse;
+}
+
+.one-whole,
+.one-half,
+.two-third,
+.one-third,
+.one-fourth {
+  display: inline-block;
+  position: relative;
+  margin-right: -4px;
+  padding: 7px 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.one-whole img,
+.one-half img,
+.two-third img,
+.one-third img,
+.one-fourth img {
+  max-width: 100%;
+}
+
+.one-half--mob {
+  width: 50%;
+}
+
+@media (min-width: 800px) {
+  .one-whole {
+    width: 100%;
+  }
+  .one-third {
+    width: 33.3333%;
+  }
+  .two-third {
+    width: 66.6666%;
+  }
+  .one-half {
+    width: 50%;
+  }
+  .one-fourth {
+    width: 25%;
+  }
 }
 
 /*# sourceMappingURL=maps/master.css.map */

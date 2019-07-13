@@ -1,0 +1,66 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 20px 10px;
+}
+
+h1,
+h2 {
+  font-family: "Exo 2", sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  p, ul {
+    font-size: 20px;
+    line-height: 1.66;
+  }
+}
+
+#terms {
+  margin-right: 10px;
+}
+
+a {
+  color: #F0923B;
+}
+
+.button.button--contact {
+  background-color: #EE8228;
+  padding: 7px 15px;
+  color: #34373D;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+@media (min-width: 800px) {
+  .commission--content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/*# sourceMappingURL=maps/commissions.css.map */

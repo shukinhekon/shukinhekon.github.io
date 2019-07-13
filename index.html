@@ -8,19 +8,24 @@
   <link rel="stylesheet" href="./public/css/lib/normalize.css">
   <link rel="stylesheet" href="./public/css/master.css">
   <link href="https://fonts.googleapis.com/css?family=Exo+2:800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
 </head>
 <body>
   <div class="core">
     <div class="content-container">
       <div id="headshot">
         <img src="./public/img/headshot.png">
-        <div class="headshot-name">Shukin</div>
+        <div class="headshot-name">
+          <object id="shukin-logo" data="./public/img/Shukin_Logo.svg" type="image/svg+xml"></object>
+        </div>
       </div>
       <div id="links">
-        <ul>
-          <li><a href="https://twitter.com/shukin">Twitter</a></li>
-          <li><a href="http://www.furaffinity.net/user/shukin">FurAffinity</a></li>
-          <!--<li><a href="./commissions">Commission Sheet</a></li>-->
+        <ul class="link-row">
+          <li class="has-icon"><a href="https://twitter.com/shukin"><img class="link-icon" src="/public/img/twitter.svg" style="padding: 0 5px;"></a></li>
+          <li class="has-icon"><a href="http://www.furaffinity.net/user/shukin"><img class="link-icon" src="/public/img/furaffinity.svg"></a></li>
+        </ul>
+        <ul class="link-row link-row-2">
+          <!-- <li><a href="./commissions">Commission Sheet</a></li> -->
           <li><a href="./terms-of-service">Terms of Service</a></li>
         </ul>
       </div>

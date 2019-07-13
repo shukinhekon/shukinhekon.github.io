@@ -1,0 +1,84 @@
+@import 'variables';
+
+.container {
+  margin: 0 auto;
+  @media (min-width: $mobile--large) {
+    width: 760px;
+  }
+  @media (min-width: $tablet) {
+    width: 800px;
+  }
+  @media (min-width: $desktop--small) {
+    width: 1024px;
+  }
+  @media (min-width: $desktop--large) {
+    width: 1200px;
+  }
+
+  &--small {
+    @media (min-width: $mobile--large) {
+      width: 760px;
+    }
+    @media (min-width: $tablet) {
+      width: 800px;
+    }
+    @media (min-width: $desktop--small) {
+      width: 800px;
+    }
+    @media (min-width: $desktop--large) {
+      width: 800px;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.row--rev {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.one-whole,
+.one-half,
+.two-third,
+.one-third,
+.one-fourth {
+  display: inline-block;
+  position: relative;
+  margin-right: -4px;
+  padding: 7px 15px;
+  box-sizing: border-box;
+  width: 100%;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.one-half--mob {
+  width: 50%;
+}
+
+@media (min-width: $mobile--large) {
+  .one-whole {
+    width: 100%;
+  }
+
+  .one-third {
+    width: 33.3333%;
+  }
+
+  .two-third {
+    width: 66.6666%;
+  }
+
+  .one-half {
+    width: 50%;
+  }
+
+  .one-fourth {
+    width: 25%;
+  }
+}

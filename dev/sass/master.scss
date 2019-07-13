@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'variables';
 
 html {
   position: relative;
@@ -27,9 +28,28 @@ body {
     img {
       margin: 0 auto;
       display: block;
-      width: 150px;
-      height: 150px;
+      width: 125px;
+      height: 125px;
       border-radius: 150px;
+
+      @media (min-width: $tablet) {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    #shukin-logo {
+      display: inline-block;
+      width: 100%;
+      max-height: 150px;
+      vertical-align: middle;
+
+      @media (min-width: $tablet) {
+        margin-left: 25px;
+        margin-top: 15px;
+        max-width: 325px;
+        max-height: unset;
+      }
     }
 
     .headshot-name {
@@ -46,16 +66,69 @@ body {
   // }
 }
 
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
 #links {
-  ul {
+  ul.link-row {
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 22px;
-    line-height: 1.45;
+    font-size: 18px;
+    line-height: 1.55;
+
+    &.link-row-2 {
+      margin-top: 20px;
+    }
+  }
+
+  li {
+    display: inline-block;
+    background-color: $accent-1;
+    transform: skew(-8deg);
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: darken($accent-1, 20%);
+    }
+
+    a {
+      padding: 9px 25px;
+      text-decoration: none;
+    }
+
+    &.has-icon a {
+      padding: 7px 10px 7px;
+    }
+  }
+
+  .link-row-2 li {
+    background-color: darken($accent-1, 20%);
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: darken($accent-1, 40%);
+    }
   }
 
   a {
     color: white;
+    display: inline-block;
+    transform: skew(8deg);
+  }
+
+  .link-icon {
+    height: 24px;
+    position: relative;
+    top: 4px;
   }
 }
+
+.content-container {
+  padding: 0 20px;
+}
+
+@import 'utilities';
+@import 'responsive';
